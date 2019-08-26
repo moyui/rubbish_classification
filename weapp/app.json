@@ -1,8 +1,9 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/logs/logs"
-  ],
+  "pages": ["pages/index/index", "pages/search/index"],
+  "usingComponents": {
+    "van-tabbar": "miniprogram_npm/vant-weapp/tabbar/index",
+    "van-tabbar-item": "miniprogram_npm/vant-weapp/tabbar-item/index"
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",

@@ -7,7 +7,8 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    active: 0
   },
   //事件处理函数
   bindViewTap: function() {
@@ -50,5 +51,9 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  // event.detail 的值为当前选中项的索引
+  onChange(event) {
+    console.log(event.detail);
   }
 })
