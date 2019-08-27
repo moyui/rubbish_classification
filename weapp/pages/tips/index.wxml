@@ -6,9 +6,9 @@
         <van-tabbar-item icon="setting-o">标签</van-tabbar-item>
     </van-tabbar>
     <!-- 用前面封装好的组件中的某个组件，需要在json中写用大括号包起来的调用（目录） -->
-     <van-tabs active1="{{ active1 }}" bind:click="onChange">
+     <van-tabs active1="{{ active1 }}" bind:click="onClick">
         <van-tab title="湿垃圾">
-           <div>是垃圾</div>
+           <div class = "">是垃圾</div>
         </van-tab>
         <van-tab title="干垃圾">内容 2</van-tab>
         <van-tab title="可回收物">内容 3</van-tab>

@@ -3,7 +3,7 @@ Page({
         active: 1,
         active1: 1
     },
-    onChange(event) {
+    onClick(event) {
         wx.showToast({
           title: event.detail.index + 1,   
         });
