@@ -1,12 +1,13 @@
 <view class="search">
     <van-toast id="van-toast" />
-    <van-search value="{{ search }}" placeholder="请输入要查询的垃圾" use-action-slot bind:search="onSearch" bind:change="onChange">
+    <van-search value="{{ search }}" placeholder="请输入要查询的垃圾" use-action-slot bind:search="onSearch" bind:change="onInputChange">
         <view slot="action" bind:tap="onSearch">查询</view>
     </van-search>
+    <View class="result">您查询的垃圾是：{{userSearch || ''}}</View>
     <View bind:touchstart="onRecordingStart" bind:touchend="onRecordingEnd" class="record {{ isRecording ? 'record_active' : ''}}"></View>
     <van-tabbar active="{{ active }}" bind:change="onChange">
-        <van-tabbar-item icon="home-o">搜索垃圾</van-tabbar-item>
-        <van-tabbar-item icon="search">标签</van-tabbar-item>
+        <van-tabbar-item icon="search">查询</van-tabbar-item>
+        <van-tabbar-item icon="thumb-circle-o">小贴士</van-tabbar-item>
         <van-tabbar-item icon="friends-o">标签</van-tabbar-item>
         <van-tabbar-item icon="setting-o">标签</van-tabbar-item>
     </van-tabbar>

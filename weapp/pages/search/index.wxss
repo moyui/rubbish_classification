@@ -17,6 +17,13 @@
   animation-direction: alternate;
 }
 
+.result {
+    padding: 0 40rpx;
+    margin-top: 120rpx;
+    text-align: center;
+    font-size: 36rpx;
+}
+
 @keyframes borderspin {
   from {
     border-radius: 50%;

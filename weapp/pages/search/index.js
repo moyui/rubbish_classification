@@ -4,10 +4,14 @@ const RecorderManager = wx.getRecorderManager();
 
 RecorderManager.onStop((res) => {
     const { tempFilePath } = res;
-    // uploadMp3Path(tempFilePath);
+    uploadMp3Path(tempFilePath);
 })
 
 const uploadMp3Path = (filePath) => {
+    Toast({
+        mask: false,
+        message: '上传中，请稍后'
+    });
     const uploadTask = wx.uploadFile({
         url: 'http://vip.yangxudong.broker.anjuke.test/work',
         filePath,
@@ -17,18 +21,13 @@ const uploadMp3Path = (filePath) => {
         name: 'video',
         success: function (res) {
             console.log(res);
-            wx.showToast({
-                title: '上传成功',
-                icon: 'success',
-                duration: 2000
-            })
+            // Toast.success('上传成功');
         },
         fail: function (res) {
             console.log(res);
+            // Toast.fail('上传失败');
         }
     })
-
-
 }
 
 Page({
@@ -36,7 +35,8 @@ Page({
         active: 0,
         search: '',
         loading: false,
-        isRecording: false
+        isRecording: false,
+        userSearch: null
     },
     onRecordingStart() {
         this.setData({
@@ -55,7 +55,7 @@ Page({
         })
         RecorderManager.stop()
     },
-    onChange(event) {
+    onInputChange(event) {
         this.setData({
             search: event.detail
         })
@@ -77,5 +77,18 @@ Page({
             },
             complete: () => Toast.clear()
         })
+    },
+    onChange(event) {
+        switch (event.detail) {
+            case 0: wx.navigateTo({
+                url: '/pages/search/index'
+            }); break;
+            case 1: wx.navigateTo({
+                url: '/pages/tips/index'
+            }); break;
+            case 4: wx.navigateTo({
+                url: '/pages/tag/index'
+            }); break;
+        }
     }
 })

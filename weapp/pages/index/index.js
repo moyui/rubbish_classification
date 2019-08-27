@@ -54,7 +54,6 @@ Page({
   },
   // event.detail 的值为当前选中项的索引
   onChange(event) {
-    console.log(event.detail)
     switch (event.detail) {
       case 0: wx.navigateTo({
         url: '/pages/search/index'

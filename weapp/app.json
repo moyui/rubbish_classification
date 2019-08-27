@@ -3,7 +3,6 @@
     "pages/index/index",
     "pages/search/index",
     "pages/tips/index",
-    "pages/jk",
     "pages/tag/index"
   ],
   "usingComponents": {
@@ -13,7 +12,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "爱分类",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"

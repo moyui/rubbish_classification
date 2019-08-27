@@ -1,4 +1,3 @@
-<!-- index.wxml -->
 <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
@@ -13,10 +12,9 @@
     <text class="user-motto">{{motto}}</text>
   </view>
   <van-tabbar active="{{ active }}" bind:change="onChange">
-    <van-tabbar-item icon="home-o">搜索垃圾</van-tabbar-item>
-    <van-tabbar-item icon="search">小贴士</van-tabbar-item>
+    <van-tabbar-item icon="search">查询</van-tabbar-item>
+    <van-tabbar-item icon="thumb-circle-o">小贴士</van-tabbar-item>
     <van-tabbar-item icon="friends-o">标签</van-tabbar-item>
     <van-tabbar-item icon="setting-o">标签</van-tabbar-item>
-    <van-tabbar-item icon="friends-o">标签1</van-tabbar-item>
   </van-tabbar>
 </view>
