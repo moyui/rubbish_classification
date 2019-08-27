@@ -1,5 +1,11 @@
 {
-  "pages": ["pages/index/index", "pages/search/index", "pages/tips/index"],
+  "pages": [
+    "pages/index/index",
+    "pages/search/index",
+    "pages/tips/index",
+    "pages/jk",
+    "pages/tag/index"
+  ],
   "usingComponents": {
     "van-tabbar": "miniprogram_npm/vant-weapp/tabbar/index",
     "van-tabbar-item": "miniprogram_npm/vant-weapp/tabbar-item/index"

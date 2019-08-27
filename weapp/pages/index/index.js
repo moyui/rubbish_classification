@@ -62,6 +62,9 @@ Page({
       case 1: wx.navigateTo({
         url: '/pages/tips/index'
       }); break;
+      case 4: wx.navigateTo({
+        url: '/pages/tag/index'
+      }); break;
     }
   }
 })
