@@ -5,6 +5,27 @@
     "pages/tips/index",
     "pages/tag/index"
   ],
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/search/index",
+        "text": "搜索"
+      },
+      {
+        "pagePath": "pages/tips/index",
+        "text": "小贴士"
+      },
+      {
+        "pagePath": "pages/tag/index",
+        "text": "标签"
+      }
+    ]
+  },
   "usingComponents": {
     "van-tabbar": "miniprogram_npm/vant-weapp/tabbar/index",
     "van-tabbar-item": "miniprogram_npm/vant-weapp/tabbar-item/index"

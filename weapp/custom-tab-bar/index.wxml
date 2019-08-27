@@ -1,0 +1,6 @@
+<van-tabbar active="{{ active }}" bind:change="onChange">
+    <van-tabbar-item icon="setting-o">首页</van-tabbar-item>
+    <van-tabbar-item icon="search">查询</van-tabbar-item>
+    <van-tabbar-item icon="thumb-circle-o">小贴士</van-tabbar-item>
+    <van-tabbar-item icon="friends-o">标签</van-tabbar-item>
+</van-tabbar>

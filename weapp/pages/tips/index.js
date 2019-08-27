@@ -1,24 +1,18 @@
 Page({
     data: {
-        active: 1,
         active1: 1
     },
-    onChange(event) {
-        switch (event.detail) {
-            case 0: wx.navigateTo({
-                url: '/pages/search/index'
-            }); break;
-            case 1: wx.navigateTo({
-                url: '/pages/tips/index'
-            }); break;
-            case 4: wx.navigateTo({
-                url: '/pages/tag/index'
-            }); break;
+    onShow() {
+        if (typeof this.getTabBar === 'function' &&
+            this.getTabBar()) {
+            this.getTabBar().setData({
+                active: 2
+            })
         }
     },
     onClick(event) {
         wx.showToast({
-          title: event.detail.index + 1,   
+            title: event.detail.index + 1,
         });
-      }
-    });
+    }
+});

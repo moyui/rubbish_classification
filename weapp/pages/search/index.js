@@ -32,11 +32,18 @@ const uploadMp3Path = (filePath) => {
 
 Page({
     data: {
-        active: 0,
         search: '',
         loading: false,
         isRecording: false,
         userSearch: null
+    },
+    onShow() {
+        if (typeof this.getTabBar === 'function' &&
+            this.getTabBar()) {
+            this.getTabBar().setData({
+                active: 1
+            })
+        }
     },
     onRecordingStart() {
         this.setData({

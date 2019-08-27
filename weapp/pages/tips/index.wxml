@@ -1,10 +1,4 @@
 <view>
-    <van-tabbar active="{{ active }}" bind:change="onChange">
-        <van-tabbar-item icon="search">查询</van-tabbar-item>
-        <van-tabbar-item icon="thumb-circle-o">小贴士</van-tabbar-item>
-        <van-tabbar-item icon="friends-o">标签</van-tabbar-item>
-        <van-tabbar-item icon="setting-o">标签</van-tabbar-item>
-    </van-tabbar>
     <!-- 用前面封装好的组件中的某个组件，需要在json中写用大括号包起来的调用（目录） -->
      <van-tabs active1="{{ active1 }}" bind:click="onClick">
         <van-tab title="湿垃圾">
