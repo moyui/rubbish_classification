@@ -54,8 +54,14 @@ Page({
   },
   // event.detail 的值为当前选中项的索引
   onChange(event) {
-    wx.navigateTo({
-      url: '/pages/search/index'
-    })
+    console.log(event.detail)
+    switch (event.detail) {
+      case 0: wx.navigateTo({
+        url: '/pages/search/index'
+      }); break;
+      case 1: wx.navigateTo({
+        url: '/pages/tips/index'
+      }); break;
+    }
   }
 })

@@ -3,66 +3,79 @@ const RecorderManager = wx.getRecorderManager();
 const buffer = new ArrayBuffer(16)
 const int32View = new Int32Array(buffer);
 
-// RecorderManager.onFrameRecorded((res) => {
-//     const { frameBuffer, isLastFrame } = res
-//     int32View.push(frameBuffer)
-//     if (isLastFrame) {
-//         uploadMp3Buffer();
-//     }
-// })
+RecorderManager.onFrameRecorded((res) => {
+    const { frameBuffer, isLastFrame } = res
+    // int32View.push(frameBuffer)
+    // if (isLastFrame) {
+    // console.log(ab2str(frameBuffer))
+    // uploadMp3Buffer(frameBuffer, isLastFrame);
+    // }
+})
 
 RecorderManager.onStop((res) => {
     const { tempFilePath } = res;
-    uploadMp3Path(tempFilePath);
+    // uploadMp3Path(tempFilePath);
     // uploadMp3Buffer()
 })
 
+// function ab2str(buf) {
+//     const str1 = String.fromCharCode.apply(null, buf);
+//     // const str2 = String.fromCharCode.apply(null, buf.slice(2, 4));
+//     console.log(str1)
+// }
+
 
 const uploadMp3Path = (filePath) => {
-    // const uploadTask = wx.uploadFile({
+    const uploadTask = wx.uploadFile({
+        url: 'http://vip.yangxudong.broker.anjuke.test/work',
+        filePath,
+        header: {
+            "Content-Type": "multipart/form-data"
+        },
+        name: 'video',
+        success: function (res) {
+            console.log(res);
+            wx.showToast({
+                title: '上传成功',
+                icon: 'success',
+                duration: 2000
+            })
+        },
+        fail: function (res) {
+            console.log(res);
+        }
+    })
+
+
+    // wx.request({
     //     url: 'http://vip.yangxudong.broker.anjuke.test/work',
-    //     filePath,
+    //     method: 'POST',
     //     header: {
-    //         "Content-Type": "multipart/form-data"
+    //         "Content-Type": "application/json"
     //     },
-    //     name: 'video',
-    //     success: function (res) {
-    //         console.log(res);
-    //         wx.showToast({
-    //             title: '上传成功',
-    //             icon: 'success',
-    //             duration: 2000
-    //         })
-    //     },
-    //     fail: function (res) {
-    //         console.log(res);
+    //     data: {
+    //         url: 5
     //     }
     // })
+}
 
-
+const uploadMp3Buffer = (buffer, isEnd) => {
+    console.log(int32View)
     wx.request({
         url: 'http://vip.yangxudong.broker.anjuke.test/work',
         method: 'POST',
+        // header: {
+        //     "Content-Type": "application/x-www-form-urlencoded"
+        // },
+        header: {
+            "Content-Type": "application/json"
+        },
         data: {
-            url: 5
+            buffer: buffer,
+            isEnd: isEnd
         }
     })
 }
-
-// const uploadMp3Buffer = () => {
-//     console.log(int32View)
-//     wx.request({
-//         url: 'http://vip.yangxudong.broker.anjuke.test/work',
-//         method: 'POST',
-//         // header: {
-//         //     "Content-Type": "application/x-www-form-urlencoded"
-//         // },
-//         header: {
-//             "Content-Type": "application/octet-stream"
-//         },
-//         data: int32View
-//     })
-// }
 
 
 
