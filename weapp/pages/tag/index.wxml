@@ -1,9 +1,0 @@
-<view>
-    <view>hello world!</view>
-    <van-tabbar active="{{ active }}" bind:change="onChange">
-        <van-tabbar-item icon="home-o">搜索垃圾</van-tabbar-item>
-        <van-tabbar-item icon="search">标签</van-tabbar-item>
-        <van-tabbar-item icon="friends-o">标签</van-tabbar-item>
-        <van-tabbar-item icon="setting-o">标签</van-tabbar-item>
-    </van-tabbar>
-</view>

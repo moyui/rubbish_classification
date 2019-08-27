@@ -8,16 +8,10 @@ Page({
         });
         switch (event.detail) {
             case 0: wx.switchTab({
-                url: '/pages/index/index'
-            }); break;
-            case 1: wx.switchTab({
                 url: '/pages/search/index'
             }); break;
-            case 2: wx.switchTab({
+            case 1: wx.switchTab({
                 url: '/pages/tips/index'
-            }); break;
-            case 4: wx.switchTab({
-                url: '/pages/tag/index'
             }); break;
         }
     }

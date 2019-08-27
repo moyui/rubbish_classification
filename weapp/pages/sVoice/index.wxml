@@ -1,0 +1,3 @@
+<view>
+    <View bind:touchstart="onRecordingStart" bind:touchend="onRecordingEnd" class="record {{ isRecording ? 'record_active' : ''}}"></View>
+</view>

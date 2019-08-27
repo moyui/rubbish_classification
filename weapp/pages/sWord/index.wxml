@@ -1,0 +1,7 @@
+<view>
+    <van-toast id="van-toast" />
+    <van-search value="{{ search }}" placeholder="请输入要查询的垃圾" use-action-slot bind:search="onSearch" bind:change="onInputChange">
+        <view slot="action" bind:tap="onSearch">查询</view>
+    </van-search>
+    <View class="result">您查询的垃圾是：{{userSearch || ''}}</View>
+</view>
