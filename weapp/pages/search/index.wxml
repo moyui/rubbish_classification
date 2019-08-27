@@ -1,8 +1,9 @@
-<view>
-    <van-search value="{{ value }}" placeholder="请输入要搜索的垃圾" use-action-slot bind:search="onSearch">
-        <view slot="action" bind:tap="onSearch">搜索</view>
+<view class="search">
+    <van-toast id="van-toast" />
+    <van-search value="{{ search }}" placeholder="请输入要查询的垃圾" use-action-slot bind:search="onSearch" bind:change="onChange">
+        <view slot="action" bind:tap="onSearch">查询</view>
     </van-search>
-    <view bind:touchstart="onRecordingStart" bind:touchend="onRecordingEnd">点击录音</view>
+    <View bind:touchstart="onRecordingStart" bind:touchend="onRecordingEnd" class="record {{ isRecording ? 'record_active' : ''}}"></View>
     <van-tabbar active="{{ active }}" bind:change="onChange">
         <van-tabbar-item icon="home-o">搜索垃圾</van-tabbar-item>
         <van-tabbar-item icon="search">标签</van-tabbar-item>
