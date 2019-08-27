@@ -1,5 +1,12 @@
 <view>
-    <view>
-        <view>语音\n查询</view>
-    </view>
+    <van-search value="{{ value }}" placeholder="请输入要搜索的垃圾" use-action-slot bind:search="onSearch">
+        <view slot="action" bind:tap="onSearch">搜索</view>
+    </van-search>
+    <view bind:touchstart="onRecordingStart" bind:touchend="onRecordingEnd">点击录音</view>
+    <van-tabbar active="{{ active }}" bind:change="onChange">
+        <van-tabbar-item icon="home-o">搜索垃圾</van-tabbar-item>
+        <van-tabbar-item icon="search">标签</van-tabbar-item>
+        <van-tabbar-item icon="friends-o">标签</van-tabbar-item>
+        <van-tabbar-item icon="setting-o">标签</van-tabbar-item>
+    </van-tabbar>
 </view>
