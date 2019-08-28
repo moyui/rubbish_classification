@@ -5,9 +5,13 @@
         <view class="result-content">
             <view wx:for="{{userSearch}}" wx:key="{{item.name}}" class="result-card">
                 <view class="{{item.css}}"></view>
-                <view class="result-name">{{item.name || '未知物品'}}</view>
+                <view class="result-name">{{item.name2 || '未知物品'}}</view>
             </view>
         </view>
     </view>
-    <View bind:touchstart="onRecordingStart" bind:touchend="onRecordingEnd" class="record {{ isRecording ? 'record_active' : ''}}"></View>
+    <view wx:else class="word">
+        <view>请告诉我，</view>
+        <view>您想搜索什么？</view>
+    </view>
+    <view bind:touchstart="onRecordingStart" bind:touchend="onRecordingEnd" class="record {{ isRecording ? 'record_active' : ''}}"></view>
 </view>

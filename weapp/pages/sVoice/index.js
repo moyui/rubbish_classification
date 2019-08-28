@@ -1,5 +1,42 @@
 import Toast from '../../miniprogram_npm/vant-weapp/toast/toast';
 
+const rd = {
+    0: {
+        'xxx0': 0
+    },
+    1: {
+        'xxx1': 1
+    },
+    2: {
+        'xxx2': 2
+    },
+    3: {
+        'xxx3': 3
+    },
+    4: {
+        'xxx4': 4
+    },
+    5: {
+        'xxx0': 1
+    },
+    6: {
+        'xxx1': 2
+    },
+    7: {
+        'xxx2': 4
+    },
+    8: {
+        'xxx3': 3
+    },
+    9: {
+        'xxx4': 3
+    },
+    10: {
+        'xxx4': 4
+    }
+}
+
+
 Page({
     Recorder: null,
     data: {
@@ -34,26 +71,35 @@ Page({
             message: '上传中...',
             duration: 0
         });
-        const uploadTask = wx.uploadFile({
-            url: 'http://vip.yangxudong.broker.anjuke.test/work',
-            filePath,
-            header: {
-                "Content-Type": "multipart/form-data"
-            },
-            name: 'video',
-            success: (res) => {
-                this.setData({
-                    userSearch: this.formatData(res.data)
-                })
-            },
-            fail: function (res) {
-            },
-            complete: () => Toast.clear()
-        })
+        // const uploadTask = wx.uploadFile({
+        //     url: 'http://vip.yangxudong.broker.anjuke.test/work',
+        //     filePath,
+        //     header: {
+        //         "Content-Type": "multipart/form-data"
+        //     },
+        //     name: 'video',
+        //     success: (res) => {
+        //         this.setData({
+        //             userSearch: this.formatData(res.data)
+        //         })
+        //     },
+        //     fail: function (res) {
+        //     },
+        //     complete: () => Toast.clear()
+        // })
+        setTimeout(() => {
+            Toast.clear();
+
+            const random = Math.round(Math.random() * 9);
+
+            this.setData({
+                userSearch: this.formatData(rd[random])
+            })
+        }, 3500)
     },
     formatData(data) {
         const format = Object.keys(data).reduce((pre, item) => {
-            return [...pre, { name: item, type: data[item], css: this.getType(data[item]) }]
+            return [...pre, { name: item, type: data[item], css: this.getType(data[item]), name2:  this.getType2(data[item])}]
         }, [])
         return format
     },
@@ -64,6 +110,15 @@ Page({
             case 2: return 'card-bad';
             case 3: return 'card-wet';
             case 4: return 'card-dry';
+        }
+    },
+    getType2(type) {
+        switch (type) {
+            case 0: return '未知物品';
+            case 1: return '可回收物品';
+            case 2: return '有害垃圾';
+            case 3: return '湿垃圾';
+            case 4: return '干垃圾';
         }
     },
 })

@@ -13,10 +13,12 @@
 .item {
   background: #eceef1;
   text-align: center;
+  padding: 20rpx 0;
 }
 .item1 {
   background: white;
   text-align: center;
+  padding: 20rpx 0;
 }
 .border {
   border: 1px solid #ccc;

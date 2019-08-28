@@ -6,7 +6,7 @@
 }
 
 .search-title {
-    margin-top: 100rpx;
+    margin-top: 240rpx;
     text-align: center;
 }
 
@@ -21,16 +21,23 @@
 
 .search-button {
     margin: 0 40rpx;
-    top: 40%;
+    top: 50%;
     transform: translateY(-50%);
     position: absolute;
     width: calc(100% - 80rpx);
 }
 
 .search-button-2 {
-    margin-top: 40rpx;
+    margin-top: 60rpx;
 }
 
 .search-button-3 {
-    margin-top: 40rpx;
+    margin-top: 60rpx;
 }
+
+.word {
+    color: #7d7e80;
+    text-align: center;
+    line-height: 60rpx;
+    height: 60px;
+  }

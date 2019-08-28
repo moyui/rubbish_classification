@@ -2,6 +2,7 @@
     <view class="search-title">
         <view class="search-title-word"></view>
     </view>
+    <view class="word">今天分一分，明天美万分</view>
     <view class="search-button">
         <view class="search-button-1">
             <van-button type="primary" size="large" bind:tap="onTapToWord" plain round color="#1989fa">

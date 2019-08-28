@@ -9,10 +9,5 @@ Page({
                 active: 1
             })
         }
-    },
-    onClick(event) {
-        wx.showToast({
-            title: event.detail.index + 1,
-        });
     }
 });

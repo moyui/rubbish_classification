@@ -7,7 +7,7 @@
         <view class="his-tag-wrap" wx:for="{{hisRecord}}" data-item="{{item}}" catch:tap="onClickHis" wx:key="{{item}}">
             <van-tag type="primary" mark size="large" wx:if="{{item}}">{{item}}</van-tag>
         </view>
-        <view class="clear-his"> 
+        <view class="clear-his">
             <van-button type="info" plain catch:tap="onClearHis">清除历史记录</van-button>
         </view>
     </view>
@@ -19,5 +19,9 @@
                 <view class="result-name">{{item.name || '未知物品'}}</view>
             </view>
         </view>
+    </view>
+    <view wx:else class="word">
+        <view>请告诉我，</view>
+        <view>您想搜索什么？</view>
     </view>
 </view>

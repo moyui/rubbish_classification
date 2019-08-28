@@ -88,3 +88,11 @@
   width: 100%;
   text-align: center;
 }
+
+.word {
+  color: #7d7e80;
+  text-align: center;
+  margin-top: 400rpx;
+  line-height: 60rpx;
+  height: 60px;
+}

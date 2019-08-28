@@ -28,11 +28,17 @@
   animation-direction: alternate;
 }
 
+.result {
+  text-align: center;
+  margin-top: 300rpx;
+}
+
 .result-content {
+  text-align: center;
   margin: 0 60rpx;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .result-card {
@@ -90,4 +96,12 @@
 
 .result-name {
   margin-top: 20rpx;
+}
+
+.word {
+  color: #7d7e80;
+  text-align: center;
+  margin-top: 400rpx;
+  line-height: 60rpx;
+  height: 60px;
 }
