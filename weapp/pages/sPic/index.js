@@ -36,7 +36,7 @@ Page({
             header: {
                 "Content-Type": "multipart/form-data"
             },
-            name: 'video',
+            name: 'photo',
             success: function (res) {
                 console.log(res);
                 // Toast.success('上传成功');

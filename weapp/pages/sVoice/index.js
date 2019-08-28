@@ -41,9 +41,6 @@ Page({
             isRecording: true
         })
         RecorderManager.start({
-            sampleRate: 16000,
-            numberOfChannels: 1,
-            encodeBitRate: 32000,
             format: 'mp3'
         });
     },

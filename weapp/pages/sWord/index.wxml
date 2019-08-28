@@ -1,12 +1,23 @@
 <view>
     <van-toast id="van-toast" />
-    <van-search value="{{ search }}" placeholder="请输入要查询的垃圾" use-action-slot bind:search="onSearch" bind:change="onInputChange" bind:focus="onHisOpen" bind:blur="onHisClose">
+    <van-search value="{{ search }}" placeholder="请输入要查询的垃圾" use-action-slot bind:search="onSearch" bind:change="onInputChange" bind:focus="onHisOpen">
         <view slot="action" bind:tap="onSearch">查询</view>
     </van-search>
-    <view wx:if="{{isHisOpen}}" class="search-his">
-        <text wx:for="{{hisRecord}}" wx:key="{{item}}">{{item}}</text>
+    <view wx:if="{{isHisOpen}}" class="search-his" bind:tap="onCancelHis">
+        <view class="his-tag-wrap" wx:for="{{hisRecord}}" data-item="{{item}}" catch:tap="onClickHis" wx:key="{{item}}">
+            <van-tag type="primary" mark size="large" wx:if="{{item}}">{{item}}</van-tag>
+        </view>
+        <view class="clear-his"> 
+            <van-button type="info" plain catch:tap="onClearHis">清除历史记录</van-button>
+        </view>
     </view>
     <view wx:if="{{userSearch}}">
-        <view class="result">您查询的垃圾是：{{''}}</view>
+        <view class="result">您查询的垃圾可能是：</view>
+        <view class="result-content">
+            <view wx:for="{{userSearch}}" wx:key="{{item.name}}" class="result-card">
+                <view class="{{item.css}}"></view>
+                <view class="result-name">{{item.name || '未知物品'}}</view>
+            </view>
+        </view>
     </view>
 </view>

@@ -1,4 +1,4 @@
 <view>
     <van-toast id="van-toast" />
-    <View bind:touchstart="onRecordingStart" bind:touchend="onRecordingEnd" class="record {{ isRecording ? 'record_active' : ''}}"></View>
+    <View bind:touchstart="onRecordingStart" bind:touchend="onRecordingEnd" class="record record_active {{ isRecording ? 'record_active' : ''}}"></View>
 </view>
