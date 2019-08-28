@@ -27,3 +27,67 @@
   animation: animationspin 1s infinite;
   animation-direction: alternate;
 }
+
+.result-content {
+  margin: 0 60rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.result-card {
+  width: 250rpx;
+  height: 350rpx;
+  margin-top: 40rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.result-card:nth-child(2n) {
+  margin-left: 130rpx;
+}
+
+.card-unknown {
+  background-image: url('https://i.loli.net/2019/08/28/5PdrVNsGQu9kxjz.jpg');
+  background-size: 250rpx 300rpx;
+  height: 300rpx;
+  width: 250rpx;
+  display: inline-block;
+}
+
+.card-retrive {
+  background-image: url('https://i.loli.net/2019/08/28/LaQqy8TJ9Ot1vfx.png');
+  background-size: 250rpx 300rpx;
+  height: 300rpx;
+  width: 250rpx;
+  display: inline-block;
+}
+
+.card-bad {
+  background-image: url('https://i.loli.net/2019/08/28/WXDa1uf4rLh26SG.png');
+  background-size: 250rpx 300rpx;
+  height: 300rpx;
+  width: 250rpx;
+  display: inline-block;
+}
+
+.card-wet {
+  background-image: url('https://i.loli.net/2019/08/28/ybuli6n7NtLMHXS.png');
+  background-size: 250rpx 300rpx;
+  height: 300rpx;
+  width: 250rpx;
+  display: inline-block;
+}
+
+.card-dry {
+  background-image: url('https://i.loli.net/2019/08/28/Dvm2yMkeK9Vfo5Y.png');
+  background-size: 250rpx 300rpx;
+  height: 300rpx;
+  width: 250rpx;
+  display: inline-block;
+}
+
+.result-name {
+  margin-top: 20rpx;
+}

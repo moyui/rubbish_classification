@@ -1,4 +1,13 @@
 <view>
     <van-toast id="van-toast" />
+    <view wx:if="{{userSearch}}">
+        <view class="result">您查询的垃圾可能是：</view>
+        <view class="result-content">
+            <view wx:for="{{userSearch}}" wx:key="{{item.name}}" class="result-card">
+                <view class="{{item.css}}"></view>
+                <view class="result-name">{{item.name || '未知物品'}}</view>
+            </view>
+        </view>
+    </view>
     <View bind:touchstart="onRecordingStart" bind:touchend="onRecordingEnd" class="record {{ isRecording ? 'record_active' : ''}}"></View>
 </view>

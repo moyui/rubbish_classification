@@ -1,11 +1,17 @@
 <view class="search">
-    <view class="search-title">爱分类</view>
+    <view class="search-title">
+        <view class="search-title-word"></view>
+    </view>
     <view class="search-button">
         <view class="search-button-1">
-            <van-button type="primary" size="large" bind:tap="onTapToWord" plain round color="#1989fa">文字查询</van-button>
+            <van-button type="primary" size="large" bind:tap="onTapToWord" plain round color="#1989fa">
+                文字查询
+            </van-button>
         </view>
         <view class="search-button-2">
-            <van-button type="primary" size="large" bind:tap="onTapToVoice" plain round color="#1989fa">语音查询</van-button>
+            <van-button type="primary" size="large" bind:tap="onTapToVoice" plain round color="#1989fa">
+                语音查询
+            </van-button>
         </view>
         <!-- <view class="search-button-2">
             <van-button type="primary" size="large" bind:tap="onTapToPic" plain round color="#1989fa">图像查询</van-button>
