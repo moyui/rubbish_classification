@@ -1,31 +1,47 @@
-.title
-{
-    font-weight: bold; 
-    background: #eceef1; 
-    text-align: center
+.title {
+  font-weight: bold;
+  text-align: center;
 }
-.text
-{
-    background: #eceef1;
+
+.intro {
+  text-indent: 2em;
 }
-.intro
-{
-    background: #eceef1;
-    text-align: center;
-    text-indent: 2em
+
+.text {
+  text-indent: 2em;
 }
-.item
-{
-    background: #eceef1;
-    text-align: center;
+.item {
+  background: #eceef1;
+  text-align: center;
 }
-.item1
-{
-    background: white;
-    text-align: center;  
+.item1 {
+  background: white;
+  text-align: center;
 }
-.border
-{
-    border: 1px solid #ccc;
-    border-radius: 15px
+.border {
+  border: 1px solid #ccc;
+  background: #eceef1;
+  border-radius: 15px;
+  margin: 20px;
+}
+
+.tip {
+    margin-bottom: 168rpx;
+}
+
+.bad {
+    background: #d94b3b4d;
+    
+}
+
+.receive {
+    background: #2A51844d;
+}
+
+.dry {
+    background: #2c2b294d;
+}
+
+.wet {
+    background: #5d423b4d;
 }
