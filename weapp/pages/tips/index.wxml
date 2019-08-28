@@ -2,7 +2,28 @@
     <!-- 用前面封装好的组件中的某个组件，需要在json中写用大括号包起来的调用（目录） -->
      <van-tabs active1="{{ active1 }}" bind:click="onClick">
         <van-tab title="湿垃圾">
-           <div class = "">是垃圾</div>
+        <view class = "border">
+           <view class = "title">湿垃圾:</view>
+           <view class = "intro">湿垃圾湿指易腐的生物质废弃物。包括生菜剩饭、瓜皮果核、花卉绿植、肉类碎骨、过期食品等。</view> 
+           <view class = "title">投放要求:</view>
+           <view class = "text">1、纯物质的食物垃圾，应该直接倒进下水口。</view>
+           <view class = "text">2、有包装物的湿垃圾应将包装物取出后分类投放，包装物请投放到对应的可回收物容齐或干垃圾容器。</view>
+        </view>
+         <view class = "item">CoCo的青稞</view>
+         <view class = "item1">KFC圆通冰淇淋</view>
+         <view class = "item">Mcake</view>
+         <view class = "item1">QQ软糖</view>
+         <view class = "item">阿波罗火腿</view>
+         <view class = "item1">阿尔卑斯糖</view>
+         <view class = "item">鹌鹑</view>
+         <view class = "item1">鹌鹑蛋</view>
+         <view class = "item">鹌鹑蛋壳</view>
+         <view class = "item1">澳洲牛肉</view>
+         <view class = "item">八宝粥</view>
+         <view class = "item1">冰草</view>
+         <view class = "item">菠菜</view>
+         <view class = "item1">白茶</view>
+         <view class = "item">布丁</view>
         </van-tab>
         <van-tab title="干垃圾">内容 2</van-tab>
         <van-tab title="可回收物">内容 3</van-tab>
