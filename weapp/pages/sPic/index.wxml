@@ -1,0 +1,4 @@
+<view>
+    <van-toast id="van-toast" />
+    <view bind:tap="onTakingPhoto">拍摄照片</view>
+</view>

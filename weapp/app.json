@@ -3,7 +3,8 @@
     "pages/search/index",
     "pages/tips/index",
     "pages/sWord/index",
-    "pages/sVoice/index"
+    "pages/sVoice/index",
+    "pages/sPic/index"
   ],
   "tabBar": {
     "custom": true,

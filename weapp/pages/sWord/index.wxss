@@ -1,0 +1,13 @@
+.result {
+    margin-top: 80rpx;
+    text-align: center;
+}
+
+.search-his {
+    position: fixed;
+    top: 108rpx;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: antiquewhite;
+}

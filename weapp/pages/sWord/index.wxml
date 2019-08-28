@@ -1,7 +1,12 @@
 <view>
     <van-toast id="van-toast" />
-    <van-search value="{{ search }}" placeholder="请输入要查询的垃圾" use-action-slot bind:search="onSearch" bind:change="onInputChange">
+    <van-search value="{{ search }}" placeholder="请输入要查询的垃圾" use-action-slot bind:search="onSearch" bind:change="onInputChange" bind:focus="onHisOpen" bind:blur="onHisClose">
         <view slot="action" bind:tap="onSearch">查询</view>
     </van-search>
-    <View class="result">您查询的垃圾是：{{userSearch || ''}}</View>
+    <view wx:if="{{isHisOpen}}" class="search-his">
+        <text wx:for="{{hisRecord}}" wx:key="{{item}}">{{item}}</text>
+    </view>
+    <view wx:if="{{userSearch}}">
+        <view class="result">您查询的垃圾是：{{''}}</view>
+    </view>
 </view>

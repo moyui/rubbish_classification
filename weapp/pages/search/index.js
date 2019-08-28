@@ -13,5 +13,8 @@ Page({
     },
     onTapToVoice() {
         wx.navigateTo({ url: '/pages/sVoice/index' })
+    },
+    onTapToPic() {
+        wx.navigateTo({ url: '/pages/sPic/index' })
     }
 })

@@ -8,7 +8,7 @@
             <van-button type="primary" size="large" bind:tap="onTapToVoice" plain round color="#1989fa">语音查询</van-button>
         </view>
         <view class="search-button-2">
-            <van-button type="primary" size="large" plain round color="#1989fa">图像查询</van-button>
+            <van-button type="primary" size="large" bind:tap="onTapToPic" plain round color="#1989fa">图像查询</van-button>
         </view>
     </view>
 </view>
