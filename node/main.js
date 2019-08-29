@@ -23,11 +23,9 @@ app.use(koaBody({
 }));
 
 app.use(async ctx => {
-    // console.log(ctx.request.files.video)
-
+    console.log(ctx.request)
 
     let data = fs.readFileSync(ctx.request.files.video.path);
-
 
     ctx.body = await new Promise((resolve) => {
         fs.writeFile('./go.mp3', data, function (err) {
@@ -50,13 +48,22 @@ app.use(async ctx => {
 
                     console.log(options)
 
-
-                    request(options, function (err, res, body) {
-                        if (err) {
-                            console.log(err)
-                        } else {
-                            resolve(body)
-                        }
+                    Promise.all([new Promise(resolve => {
+                        fs.unlink('/Users/moyui/sean/Mycode/rubbish_classification/node/go.mp3', () => {
+                            return resolve();
+                        })
+                    }), new Promise(resolve => {
+                        fs.unlink('/Users/moyui/sean/Mycode/rubbish_classification/node/pcm16k.pcm', () => {
+                            return resolve();
+                        })
+                    })]).then(() => {
+                        request(options, function (err, res, body) {
+                            if (err) {
+                                console.log(err)
+                            } else {
+                                resolve(body)
+                            }
+                        })
                     })
                 }, function (err) {
                     console.log(err);

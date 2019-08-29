@@ -34,13 +34,11 @@
 }
 
 .result-content {
-  text-align: center;
   margin: 0 60rpx;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-
 .result-card {
   width: 250rpx;
   height: 350rpx;
@@ -104,4 +102,9 @@
   margin-top: 400rpx;
   line-height: 60rpx;
   height: 60px;
+}
+
+.show {
+  height: 1050rpx;
+  overflow: scroll;
 }

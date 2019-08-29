@@ -1,41 +1,5 @@
 import Toast from '../../miniprogram_npm/vant-weapp/toast/toast';
 
-const rd = {
-    0: {
-        'xxx0': 0
-    },
-    1: {
-        'xxx1': 1
-    },
-    2: {
-        'xxx2': 2
-    },
-    3: {
-        'xxx3': 3
-    },
-    4: {
-        'xxx4': 4
-    },
-    5: {
-        'xxx0': 1
-    },
-    6: {
-        'xxx1': 2
-    },
-    7: {
-        'xxx2': 4
-    },
-    8: {
-        'xxx3': 3
-    },
-    9: {
-        'xxx4': 3
-    },
-    10: {
-        'xxx4': 4
-    }
-}
-
 
 Page({
     Recorder: null,
