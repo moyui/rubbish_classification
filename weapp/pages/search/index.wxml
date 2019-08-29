@@ -1,4 +1,5 @@
 <view class="search">
+    <van-notice-bar left-icon="volume-o" text="小贴士全国查询功能待上线，敬请期待。即将开放图像查询功能。" />
     <view class="search-title">
         <view class="search-title-word"></view>
     </view>

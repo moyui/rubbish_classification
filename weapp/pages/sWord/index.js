@@ -22,11 +22,11 @@ Page({
             duration: 0
         });
         wx.request({
-            url: 'http://vip.yangxudong.broker.anjuke.test/size',
+            url: `http://192.168.19.170:8080/app-msc-web/consultant/getGarbage/${this.data.search}.json`,
             method: 'GET',
-            data: {
-                keyword: this.data.search
-            },
+            // data: {
+            //     keyword: this.data.search
+            // },
             success: (res) => {
                 this.setData({
                     userSearch: this.formatData(res.data)
